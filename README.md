@@ -1,5 +1,4 @@
 # checkers-iOS
-swift
 
 login / registration
 -create/get token
