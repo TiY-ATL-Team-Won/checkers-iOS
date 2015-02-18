@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -194,6 +196,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4S-a4-TjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="442" y="-62"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0aa-q5-VWg">
+            <objects>
+                <viewController id="MMC-hU-xru" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="stO-4s-76N"/>
+                        <viewControllerLayoutGuide type="bottom" id="22b-yC-bEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lc9-Ey-ZgO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-ux-URi" customClass="GameBoardView" customModule="checkers_iOS" customModuleProvider="target">
+                                <rect key="frame" x="75" y="70" width="451" height="459"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cvZ-ux-URi" secondAttribute="height" multiplier="444:451" id="KFG-WB-B0b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cvZ-ux-URi" secondAttribute="centerX" id="AdS-RC-43T"/>
+                            <constraint firstAttribute="centerY" secondItem="cvZ-ux-URi" secondAttribute="centerY" id="lIR-6F-IQK"/>
+                            <constraint firstAttribute="width" secondItem="cvZ-ux-URi" secondAttribute="width" multiplier="600:451" id="yJm-qP-ctO"/>
+                        </constraints>
+                    </view>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5y-zp-n3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-46"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="63H-TX-Lgi">

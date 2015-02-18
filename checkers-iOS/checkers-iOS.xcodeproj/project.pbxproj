@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ACE304B1A95175D00949C7F /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304A1A95175D00949C7F /* GameBoardView.swift */; };
+		5ACE304D1A95179400949C7F /* GamePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304C1A95179400949C7F /* GamePiece.swift */; };
 		B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F454091A93EFEC005638AE /* AppDelegate.swift */; };
 		B6F4540C1A93EFEC005638AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4540B1A93EFEC005638AE /* ViewController.swift */; };
 		B6F4540F1A93EFEC005638AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4540D1A93EFEC005638AE /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5ACE304A1A95175D00949C7F /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		5ACE304C1A95179400949C7F /* GamePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePiece.swift; sourceTree = "<group>"; };
 		B6F454041A93EFEC005638AE /* checkers-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkers-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F454081A93EFEC005638AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F454091A93EFEC005638AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			children = (
 				B6F454091A93EFEC005638AE /* AppDelegate.swift */,
 				B6F4540B1A93EFEC005638AE /* ViewController.swift */,
+				5ACE304A1A95175D00949C7F /* GameBoardView.swift */,
+				5ACE304C1A95179400949C7F /* GamePiece.swift */,
 				B6F4540D1A93EFEC005638AE /* Main.storyboard */,
 				B6F454101A93EFEC005638AE /* Images.xcassets */,
 				B6F454121A93EFEC005638AE /* LaunchScreen.xib */,
@@ -214,6 +220,8 @@
 			files = (
 				B6F4540C1A93EFEC005638AE /* ViewController.swift in Sources */,
 				B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */,
+				5ACE304D1A95179400949C7F /* GamePiece.swift in Sources */,
+				5ACE304B1A95175D00949C7F /* GameBoardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +413,7 @@
 				B6F454251A93EFEC005638AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6F454261A93EFEC005638AE /* Build configuration list for PBXNativeTarget "checkers-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				B6F454281A93EFEC005638AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
