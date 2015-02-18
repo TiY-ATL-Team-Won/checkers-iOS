@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6364F671A9516B000CC6414 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6364F661A9516B000CC6414 /* API.swift */; };
+		B6364F691A95179F00CC6414 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6364F681A95179F00CC6414 /* RegistrationVC.swift */; };
+		B6364F6B1A95180C00CC6414 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6364F6A1A95180C00CC6414 /* MainMenuVC.swift */; };
 		B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F454091A93EFEC005638AE /* AppDelegate.swift */; };
 		B6F4540C1A93EFEC005638AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4540B1A93EFEC005638AE /* ViewController.swift */; };
 		B6F4540F1A93EFEC005638AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4540D1A93EFEC005638AE /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B6364F661A9516B000CC6414 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B6364F681A95179F00CC6414 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		B6364F6A1A95180C00CC6414 /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		B6F454041A93EFEC005638AE /* checkers-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkers-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F454081A93EFEC005638AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F454091A93EFEC005638AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6364F6C1A95181E00CC6414 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4540B1A93EFEC005638AE /* ViewController.swift */,
+				B6364F681A95179F00CC6414 /* RegistrationVC.swift */,
+				B6364F6A1A95180C00CC6414 /* MainMenuVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		B6F453FB1A93EFEC005638AE = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +93,9 @@
 		B6F454061A93EFEC005638AE /* checkers-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B6F454091A93EFEC005638AE /* AppDelegate.swift */,
-				B6F4540B1A93EFEC005638AE /* ViewController.swift */,
+				B6364F661A9516B000CC6414 /* API.swift */,
 				B6F4540D1A93EFEC005638AE /* Main.storyboard */,
-				B6F454101A93EFEC005638AE /* Images.xcassets */,
-				B6F454121A93EFEC005638AE /* LaunchScreen.xib */,
+				B6364F6C1A95181E00CC6414 /* View Controllers */,
 				B6F454071A93EFEC005638AE /* Supporting Files */,
 			);
 			path = "checkers-iOS";
@@ -90,6 +104,9 @@
 		B6F454071A93EFEC005638AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B6F454091A93EFEC005638AE /* AppDelegate.swift */,
+				B6F454101A93EFEC005638AE /* Images.xcassets */,
+				B6F454121A93EFEC005638AE /* LaunchScreen.xib */,
 				B6F454081A93EFEC005638AE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -213,7 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6F4540C1A93EFEC005638AE /* ViewController.swift in Sources */,
+				B6364F6B1A95180C00CC6414 /* MainMenuVC.swift in Sources */,
+				B6364F671A9516B000CC6414 /* API.swift in Sources */,
 				B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */,
+				B6364F691A95179F00CC6414 /* RegistrationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +359,7 @@
 				INFOPLIST_FILE = "checkers-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -349,6 +370,7 @@
 				INFOPLIST_FILE = "checkers-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -405,6 +427,7 @@
 				B6F454251A93EFEC005638AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6F454261A93EFEC005638AE /* Build configuration list for PBXNativeTarget "checkers-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +436,7 @@
 				B6F454281A93EFEC005638AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -26,15 +26,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-hG-Wru">
-                                <rect key="frame" x="16" y="213" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="MVk-Mv-cmj"/>
-                                    <constraint firstAttribute="width" constant="288" id="kaB-mz-U9u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YR9-lS-Vu2">
                                 <rect key="frame" x="95" y="274" width="130" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,7 +35,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <state key="normal" title="sign in"/>
+                                <state key="normal" title="log in"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FrP-oj-yng"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NU-Pm-5jl">
                                 <rect key="frame" x="85" y="501" width="150" height="34"/>
@@ -57,6 +51,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1a5-yt-u9Y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkerz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-tH-96d">
                                 <rect key="frame" x="20" y="28" width="281" height="96"/>
@@ -69,6 +66,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-hG-Wru">
+                                <rect key="frame" x="16" y="213" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MVk-Mv-cmj"/>
+                                    <constraint firstAttribute="width" constant="288" id="kaB-mz-U9u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -89,7 +95,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Vhd-gq-2x4" id="baJ-Ap-fPa"/>
                         <outlet property="loginButton" destination="YR9-lS-Vu2" id="zgE-Vb-cfM"/>
+                        <outlet property="passwordTextField" destination="aFt-hG-Wru" id="7Ne-lg-eeM"/>
                         <segue destination="nP3-8V-rRv" kind="presentation" id="2EM-Up-n4i"/>
                         <segue destination="OPf-pQ-ojW" kind="show" id="fPa-ja-OC1"/>
                     </connections>
@@ -98,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-74" y="-62"/>
         </scene>
-        <!--View Controller-->
+        <!--Main MenuVC-->
         <scene sceneID="f6Q-sc-d1m">
             <objects>
-                <viewController id="nP3-8V-rRv" sceneMemberID="viewController">
+                <viewController id="nP3-8V-rRv" customClass="MainMenuVC" customModule="checkers_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o83-Xg-uAu"/>
                         <viewControllerLayoutGuide type="bottom" id="L3d-ML-WES"/>
@@ -129,6 +137,9 @@
                                 <state key="normal" title="find game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="findGameAction:" destination="nP3-8V-rRv" eventType="touchUpInside" id="xDd-W4-OES"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uo-zm-QMM">
                                 <rect key="frame" x="95" y="381" width="130" height="30"/>
@@ -142,6 +153,9 @@
                                 <state key="normal" title="game options">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameOptionsAction:" destination="nP3-8V-rRv" eventType="touchUpInside" id="qWm-Sz-h4i"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jM9-Uy-ekl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -167,6 +181,9 @@
                                 <state key="normal" title="my stats">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="myStatsAction:" destination="nP3-8V-rRv" eventType="touchUpInside" id="q8e-mo-xrS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,15 +207,18 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mainMenuImage" destination="6rU-uk-6OU" id="uyX-k0-Top"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4S-a4-TjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="442" y="-62"/>
         </scene>
-        <!--View Controller-->
+        <!--RegistrationVC-->
         <scene sceneID="63H-TX-Lgi">
             <objects>
-                <viewController id="OPf-pQ-ojW" sceneMemberID="viewController">
+                <viewController id="OPf-pQ-ojW" customClass="RegistrationVC" customModule="checkers_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dst-Kk-4Qg"/>
                         <viewControllerLayoutGuide type="bottom" id="Nyx-It-qCt"/>
@@ -211,7 +231,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Registation" id="MWj-o2-ktI">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="uNW-8K-Wig"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uNW-8K-Wig">
+                                            <connections>
+                                                <action selector="backAction:" destination="OPf-pQ-ojW" id="mDg-rO-rIh"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -233,11 +257,18 @@
                                 <state key="normal" title="create account">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountAction:" destination="OPf-pQ-ojW" eventType="touchUpInside" id="HTl-jn-Cpp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Yq4-nB-SZr" id="WLR-Q8-Son"/>
+                        <outlet property="passwordTextField" destination="fSd-xe-kFC" id="Ka7-Op-TVt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sms-Fk-R6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
