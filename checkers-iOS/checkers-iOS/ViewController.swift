@@ -8,11 +8,21 @@
 
 import UIKit
 
+@IBDesignable
+
 class ViewController: UIViewController {
 
+    @IBOutlet var loginButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        loginButton = UIButton(frame: CGRectMake(50, 100, 100, 50))
+        
+        loginButton.backgroundColor = UIColor.greenColor()
+        
     }
 
     override func didReceiveMemoryWarning() {
