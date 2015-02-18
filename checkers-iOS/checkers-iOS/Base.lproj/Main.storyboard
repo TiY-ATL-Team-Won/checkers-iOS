@@ -110,14 +110,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6rU-uk-6OU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rU-uk-6OU">
                                 <rect key="frame" x="70" y="69" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="1R8-ee-Jtd"/>
                                     <constraint firstAttribute="width" constant="180" id="YPv-RU-sft"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIs-Ky-J9a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIs-Ky-J9a">
                                 <rect key="frame" x="95" y="299" width="130" height="30"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -130,12 +130,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uo-zm-QMM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uo-zm-QMM">
                                 <rect key="frame" x="95" y="381" width="130" height="30"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="a4o-Gu-gjs"/>
-                                    <constraint firstAttribute="width" constant="130" id="zrf-PV-oty"/>
+                                    <constraint firstAttribute="height" constant="30" id="ePT-T3-Rzl"/>
+                                    <constraint firstAttribute="width" constant="130" id="fBe-MY-J2y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -143,20 +143,24 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jM9-Uy-ekl">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jM9-Uy-ekl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="KGr-Zx-Fps"/>
+                                    <constraint firstAttribute="height" constant="44" id="wOa-UR-BDV"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Main Menu" id="MmM-v6-0vb">
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="ZAK-3G-Ltu"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWk-Kn-J4v">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWk-Kn-J4v">
                                 <rect key="frame" x="95" y="461" width="130" height="30"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ray-zK-Oir"/>
-                                    <constraint firstAttribute="width" constant="130" id="gYg-0G-l0p"/>
+                                    <constraint firstAttribute="width" constant="130" id="CkO-5Y-Q0O"/>
+                                    <constraint firstAttribute="height" constant="30" id="Gin-MY-gOK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -168,14 +172,19 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="hIs-Ky-J9a" secondAttribute="centerX" id="2RJ-eZ-xD4"/>
+                            <constraint firstAttribute="centerX" secondItem="DWk-Kn-J4v" secondAttribute="centerX" id="5uh-oY-owZ"/>
                             <constraint firstItem="6rU-uk-6OU" firstAttribute="top" secondItem="jM9-Uy-ekl" secondAttribute="bottom" constant="25" id="9Vk-sj-npI"/>
                             <constraint firstAttribute="centerX" secondItem="6rU-uk-6OU" secondAttribute="centerX" id="ER9-tb-Syq"/>
-                            <constraint firstAttribute="centerX" secondItem="4Uo-zm-QMM" secondAttribute="centerX" id="RUB-pd-KKV"/>
-                            <constraint firstItem="DWk-Kn-J4v" firstAttribute="top" secondItem="4Uo-zm-QMM" secondAttribute="bottom" constant="50" id="Twx-iS-CFg"/>
-                            <constraint firstAttribute="centerX" secondItem="DWk-Kn-J4v" secondAttribute="centerX" id="Y7k-km-VoY"/>
-                            <constraint firstItem="4Uo-zm-QMM" firstAttribute="top" secondItem="hIs-Ky-J9a" secondAttribute="bottom" constant="52" id="hHI-zB-xTb"/>
+                            <constraint firstItem="hIs-Ky-J9a" firstAttribute="top" secondItem="6rU-uk-6OU" secondAttribute="bottom" constant="50" id="FVi-uw-R3p"/>
+                            <constraint firstItem="jM9-Uy-ekl" firstAttribute="top" secondItem="kAF-3v-Bq1" secondAttribute="topMargin" id="LxH-eN-14a"/>
+                            <constraint firstItem="4Uo-zm-QMM" firstAttribute="top" secondItem="hIs-Ky-J9a" secondAttribute="bottom" constant="52" id="M2Z-Xc-R0b"/>
+                            <constraint firstItem="L3d-ML-WES" firstAttribute="top" secondItem="DWk-Kn-J4v" secondAttribute="bottom" constant="33" id="R60-Pq-MQg"/>
+                            <constraint firstItem="jM9-Uy-ekl" firstAttribute="leading" secondItem="kAF-3v-Bq1" secondAttribute="leadingMargin" constant="-16" id="UTJ-fU-pLe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jM9-Uy-ekl" secondAttribute="trailing" constant="-16" id="YYE-8z-8r6"/>
+                            <constraint firstItem="DWk-Kn-J4v" firstAttribute="top" secondItem="4Uo-zm-QMM" secondAttribute="bottom" constant="50" id="Zrr-cy-ytE"/>
                             <constraint firstItem="6rU-uk-6OU" firstAttribute="leading" secondItem="kAF-3v-Bq1" secondAttribute="leadingMargin" constant="54" id="uaV-TD-RVB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6rU-uk-6OU" secondAttribute="trailing" constant="54" id="vGm-oz-Jn7"/>
+                            <constraint firstAttribute="centerX" secondItem="4Uo-zm-QMM" secondAttribute="centerX" id="vHs-Al-5DD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
