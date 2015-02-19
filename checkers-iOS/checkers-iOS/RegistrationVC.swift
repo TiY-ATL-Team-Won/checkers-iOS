@@ -16,7 +16,19 @@ class RegistrationVC: UIViewController {
     
     @IBAction func createAccount(sender:AnyObject) {
     
-    
+        var emailString = emailTextField.text
+        
+        var passwordString = passwordTextField.text
+        
+        if let token = User.currentUser().token {
+            
+            println(token)
+            
+        } else {
+            
+            User.currentUser().getUserToken(emailString, password: passwordString)
+            
+        }
     
     }
     
