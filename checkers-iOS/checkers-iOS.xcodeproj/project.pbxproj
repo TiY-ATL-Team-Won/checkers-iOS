@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		5ACE304B1A95175D00949C7F /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304A1A95175D00949C7F /* GameBoardView.swift */; };
 		5ACE304D1A95179400949C7F /* GamePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304C1A95179400949C7F /* GamePiece.swift */; };
+		5ACE304F1A9526D300949C7F /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304E1A9526D300949C7F /* GameLogic.swift */; };
+		5ACE30541A95300800949C7F /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE30531A95300800949C7F /* RegistrationVC.swift */; };
+		5ACE30591A9533C000949C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE30561A95338B00949C7F /* ViewController.swift */; };
 		B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F454091A93EFEC005638AE /* AppDelegate.swift */; };
-		B6F4540C1A93EFEC005638AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4540B1A93EFEC005638AE /* ViewController.swift */; };
 		B6F4540F1A93EFEC005638AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4540D1A93EFEC005638AE /* Main.storyboard */; };
 		B6F454111A93EFEC005638AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F454101A93EFEC005638AE /* Images.xcassets */; };
 		B6F454141A93EFEC005638AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F454121A93EFEC005638AE /* LaunchScreen.xib */; };
@@ -30,10 +32,12 @@
 /* Begin PBXFileReference section */
 		5ACE304A1A95175D00949C7F /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		5ACE304C1A95179400949C7F /* GamePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePiece.swift; sourceTree = "<group>"; };
+		5ACE304E1A9526D300949C7F /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		5ACE30531A95300800949C7F /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		5ACE30561A95338B00949C7F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F454041A93EFEC005638AE /* checkers-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkers-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F454081A93EFEC005638AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F454091A93EFEC005638AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6F4540B1A93EFEC005638AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6F4540E1A93EFEC005638AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6F454101A93EFEC005638AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B6F454131A93EFEC005638AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ACE30521A952EDD00949C7F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5ACE30561A95338B00949C7F /* ViewController.swift */,
+				5ACE30531A95300800949C7F /* RegistrationVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		B6F453FB1A93EFEC005638AE = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +94,11 @@
 		B6F454061A93EFEC005638AE /* checkers-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B6F454091A93EFEC005638AE /* AppDelegate.swift */,
-				B6F4540B1A93EFEC005638AE /* ViewController.swift */,
+				5ACE30521A952EDD00949C7F /* View Controllers */,
 				5ACE304A1A95175D00949C7F /* GameBoardView.swift */,
 				5ACE304C1A95179400949C7F /* GamePiece.swift */,
+				5ACE304E1A9526D300949C7F /* GameLogic.swift */,
 				B6F4540D1A93EFEC005638AE /* Main.storyboard */,
-				B6F454101A93EFEC005638AE /* Images.xcassets */,
-				B6F454121A93EFEC005638AE /* LaunchScreen.xib */,
 				B6F454071A93EFEC005638AE /* Supporting Files */,
 			);
 			path = "checkers-iOS";
@@ -96,6 +107,9 @@
 		B6F454071A93EFEC005638AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B6F454091A93EFEC005638AE /* AppDelegate.swift */,
+				B6F454101A93EFEC005638AE /* Images.xcassets */,
+				B6F454121A93EFEC005638AE /* LaunchScreen.xib */,
 				B6F454081A93EFEC005638AE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -218,9 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F4540C1A93EFEC005638AE /* ViewController.swift in Sources */,
+				5ACE30591A9533C000949C7F /* ViewController.swift in Sources */,
+				5ACE30541A95300800949C7F /* RegistrationVC.swift in Sources */,
 				B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */,
 				5ACE304D1A95179400949C7F /* GamePiece.swift in Sources */,
+				5ACE304F1A9526D300949C7F /* GameLogic.swift in Sources */,
 				5ACE304B1A95175D00949C7F /* GameBoardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +363,7 @@
 				INFOPLIST_FILE = "checkers-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -357,6 +374,7 @@
 				INFOPLIST_FILE = "checkers-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

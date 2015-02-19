@@ -14,9 +14,16 @@ class ViewController: UIViewController {
 
     @IBOutlet var loginButton: UIButton!
     
+    @IBOutlet var emailField: UITextField!
+    
+    @IBOutlet var passwordField: UITextField!
+    
+    @IBAction func createAccount(sender: AnyObject) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         loginButton = UIButton(frame: CGRectMake(50, 100, 100, 50))
