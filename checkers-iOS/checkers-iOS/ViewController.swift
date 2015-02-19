@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
     
     @IBAction func createAccount(sender: AnyObject) {
-    }
+    
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
