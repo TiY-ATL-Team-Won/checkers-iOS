@@ -47,6 +47,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="sign in"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vMx-k5-Ryw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NU-Pm-5jl">
                                 <rect key="frame" x="85" y="501" width="150" height="34"/>
@@ -61,6 +64,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccount:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fbb-8E-gVm"/>
+                                    <segue destination="OPf-pQ-ojW" kind="show" id="EAD-Sg-BK8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkerz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-tH-96d">
@@ -95,10 +99,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="emailField" destination="Vhd-gq-2x4" id="dQf-1s-hDU"/>
-                        <outlet property="loginButton" destination="YR9-lS-Vu2" id="zgE-Vb-cfM"/>
                         <outlet property="passwordField" destination="aFt-hG-Wru" id="zZe-qV-8CM"/>
-                        <segue destination="nP3-8V-rRv" kind="presentation" id="2EM-Up-n4i"/>
-                        <segue destination="OPf-pQ-ojW" kind="show" id="fPa-ja-OC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -108,7 +109,7 @@
         <!--View Controller-->
         <scene sceneID="f6Q-sc-d1m">
             <objects>
-                <viewController id="nP3-8V-rRv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" id="nP3-8V-rRv" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o83-Xg-uAu"/>
                         <viewControllerLayoutGuide type="bottom" id="L3d-ML-WES"/>
