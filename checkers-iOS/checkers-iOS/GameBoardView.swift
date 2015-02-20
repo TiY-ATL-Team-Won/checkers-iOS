@@ -5,71 +5,95 @@
 
 import UIKit
 
+
+
 /// 0 = empty, 1 = player1, 2 = player2
-
-
-let boardSquares = [
-
-    [0,1,0,1,0,1,0,1],
-    [1,0,1,0,1,0,1,0],
-    [0,1,0,1,0,1,0,1],
-    [0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0],
-    [2,0,2,0,2,0,2,0],
-    [0,2,0,2,0,2,0,2],
-    [2,0,2,0,2,0,2,0]
-
-]
-
-var boardPieces: [[GamePiece?]] = Array(count: 8, repeatedValue: Array(count: 8, repeatedValue: nil))
+enum PlayerType {
+    
+    case Empty
+    case Player1
+    case Player2
+    
+    case Player1King
+    case Player2King
+    
+}
 
 // board squares [row][col]
 
 
-@ IBDesignable class GameBoardView: UIView {
+@IBDesignable class GameBoardView: UIView, GamePieceDelegate {
     
     let gridSize = 8
     
-   override func layoutSubviews() {
+    var piece = PieceType.Empty
     
-        for (rowIndex,rowArray) in enumerate(boardSquares)  {
+    override func layoutSubviews() {
+        
+        if let boardSquares = DataModel.mainData().currentGame?.boardSquares {
             
-            for (columnIndex,squarePieceType) in enumerate(rowArray) {
-              
-                if squarePieceType == 0 { continue }
+            for (rowIndex,rowArray) in enumerate(boardSquares)  {
                 
-                println(squarePieceType)
-                if let type = PieceType(rawValue: squarePieceType) {
+                for (columnIndex,squarePieceType) in enumerate(rowArray) {
                     
-                    var piece = GamePiece(type: type)
+                    if squarePieceType == 0 { continue }
                     
-                    boardPieces[rowIndex][columnIndex] = piece
+//                    println(squarePieceType)
+                    if let type = PieceType(rawValue: squarePieceType) {
+                        
+                        var piece = GamePiece(type: type)
+                        
+                        piece.square = (columnIndex, rowIndex)
+                        piece.delegate = self
+                        
+                        DataModel.mainData().currentGame?.boardPieces[rowIndex][columnIndex] = piece
+                        
+                        let cF = CGFloat(columnIndex)
+                        let rF = CGFloat(rowIndex)
+                        
+                        let squareSize = frame.width / CGFloat(gridSize)
+                        
+                        let x = cF * squareSize + squareSize / 2
+                        let y = rF * squareSize + squareSize / 2
+                        
+                        piece.center = CGPointMake(x, y)
+                        
+                        addSubview(piece)
+                        
+                    }
                     
-                    let cF = CGFloat(columnIndex)
-                    let rF = CGFloat(rowIndex)
                     
-                    let squareSize = frame.width / CGFloat(gridSize)
+                    // var piece = GamePiece(type: PieceType.Player1)
                     
-                    let x = cF * squareSize + squareSize / 2
-                    let y = rF * squareSize + squareSize / 2
-                    
-                    piece.center = CGPointMake(x, y)
-                    
-                    
-                    addSubview(piece)
                     
                 }
-                
-                
-//                var piece = GamePiece(type: PieceType.Player1)
-                
-                
             }
         }
     }
     
+    func pieceSelected(piece: GamePiece) {
+        
+        let (c,r) = piece.square
+        let spotTopRight = DataModel.mainData().currentGame?.boardPieces[c + 1][r - 1]
+        let spotTopLeft = DataModel.mainData().currentGame?.boardPieces[c - 1][r - 1]
+        
+    }
     
-    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
+        if let touch = touches.allObjects.last as? UITouch {
+            
+            let location = touch.locationInView(self)
+            
+            let squareSize = frame.width / CGFloat(gridSize)
+            
+            let col = Int(floor(location.x / squareSize))
+            let row = Int(floor(location.y / squareSize))
+            
+            let selectedSquare = DataModel.mainData().currentGame?.boardPieces[row][col]
+        }
+    }
+
     override func drawRect(rect: CGRect) {
     
         var context = UIGraphicsGetCurrentContext()

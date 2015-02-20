@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A9178471A9684A30060CFA8 /* GameBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9178461A9684A30060CFA8 /* GameBoardVC.swift */; };
+		5A9178491A9686920060CFA8 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9178481A9686920060CFA8 /* GameModel.swift */; };
 		5ACE304B1A95175D00949C7F /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304A1A95175D00949C7F /* GameBoardView.swift */; };
 		5ACE304D1A95179400949C7F /* GamePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304C1A95179400949C7F /* GamePiece.swift */; };
-		5ACE304F1A9526D300949C7F /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE304E1A9526D300949C7F /* GameLogic.swift */; };
 		5ACE30541A95300800949C7F /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE30531A95300800949C7F /* RegistrationVC.swift */; };
 		5ACE30591A9533C000949C7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE30561A95338B00949C7F /* ViewController.swift */; };
 		B67E15781A966F7800BC55FC /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E15771A966F7800BC55FC /* APICall.swift */; };
@@ -31,9 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A9178461A9684A30060CFA8 /* GameBoardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardVC.swift; sourceTree = "<group>"; };
+		5A9178481A9686920060CFA8 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		5ACE304A1A95175D00949C7F /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		5ACE304C1A95179400949C7F /* GamePiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePiece.swift; sourceTree = "<group>"; };
-		5ACE304E1A9526D300949C7F /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		5ACE30531A95300800949C7F /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		5ACE30561A95338B00949C7F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B67E15771A966F7800BC55FC /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				5ACE30561A95338B00949C7F /* ViewController.swift */,
 				5ACE30531A95300800949C7F /* RegistrationVC.swift */,
+				5A9178461A9684A30060CFA8 /* GameBoardVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -99,7 +102,7 @@
 				5ACE30521A952EDD00949C7F /* View Controllers */,
 				5ACE304A1A95175D00949C7F /* GameBoardView.swift */,
 				5ACE304C1A95179400949C7F /* GamePiece.swift */,
-				5ACE304E1A9526D300949C7F /* GameLogic.swift */,
+				5A9178481A9686920060CFA8 /* GameModel.swift */,
 				B67E15771A966F7800BC55FC /* APICall.swift */,
 				B6F4540D1A93EFEC005638AE /* Main.storyboard */,
 				B6F454071A93EFEC005638AE /* Supporting Files */,
@@ -239,9 +242,10 @@
 				5ACE30541A95300800949C7F /* RegistrationVC.swift in Sources */,
 				B6F4540A1A93EFEC005638AE /* AppDelegate.swift in Sources */,
 				5ACE304D1A95179400949C7F /* GamePiece.swift in Sources */,
-				5ACE304F1A9526D300949C7F /* GameLogic.swift in Sources */,
 				B67E15781A966F7800BC55FC /* APICall.swift in Sources */,
+				5A9178491A9686920060CFA8 /* GameModel.swift in Sources */,
 				5ACE304B1A95175D00949C7F /* GameBoardView.swift in Sources */,
+				5A9178471A9684A30060CFA8 /* GameBoardVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
