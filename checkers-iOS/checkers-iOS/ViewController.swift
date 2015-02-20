@@ -12,19 +12,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var loginButton: UIButton!
     
+    @IBOutlet var emailField: UITextField!
+    
+    @IBOutlet var passwordField: UITextField!
+    
+    @IBAction func loginButton(sender: AnyObject) {
+        
+    goToApp()
+        
+    }
+    @IBAction func createAccount(sender: AnyObject) {
+    
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
-        loginButton = UIButton(frame: CGRectMake(50, 100, 100, 50))
-        
-        loginButton.backgroundColor = UIColor.greenColor()
-        
+       
     }
 
+    func goToApp() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MainMenu") as UIViewController
+    
+        UIApplication.sharedApplication().keyWindow?.rootViewController = vc
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

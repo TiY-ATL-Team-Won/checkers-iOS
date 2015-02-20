@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -45,6 +47,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="sign in"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vMx-k5-Ryw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NU-Pm-5jl">
                                 <rect key="frame" x="85" y="501" width="150" height="34"/>
@@ -57,6 +62,10 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fbb-8E-gVm"/>
+                                    <segue destination="OPf-pQ-ojW" kind="show" id="EAD-Sg-BK8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkerz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-tH-96d">
                                 <rect key="frame" x="20" y="28" width="281" height="96"/>
@@ -89,9 +98,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="loginButton" destination="YR9-lS-Vu2" id="zgE-Vb-cfM"/>
-                        <segue destination="nP3-8V-rRv" kind="presentation" id="2EM-Up-n4i"/>
-                        <segue destination="OPf-pQ-ojW" kind="show" id="fPa-ja-OC1"/>
+                        <outlet property="emailField" destination="Vhd-gq-2x4" id="dQf-1s-hDU"/>
+                        <outlet property="passwordField" destination="aFt-hG-Wru" id="zZe-qV-8CM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -101,7 +109,7 @@
         <!--View Controller-->
         <scene sceneID="f6Q-sc-d1m">
             <objects>
-                <viewController id="nP3-8V-rRv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" id="nP3-8V-rRv" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o83-Xg-uAu"/>
                         <viewControllerLayoutGuide type="bottom" id="L3d-ML-WES"/>
@@ -196,9 +204,42 @@
             <point key="canvasLocation" x="442" y="-62"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="0aa-q5-VWg">
+            <objects>
+                <viewController id="MMC-hU-xru" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="stO-4s-76N"/>
+                        <viewControllerLayoutGuide type="bottom" id="22b-yC-bEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lc9-Ey-ZgO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-ux-URi" customClass="GameBoardView" customModule="checkers_iOS" customModuleProvider="target">
+                                <rect key="frame" x="75" y="70" width="451" height="459"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cvZ-ux-URi" secondAttribute="height" multiplier="444:451" id="KFG-WB-B0b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cvZ-ux-URi" secondAttribute="centerX" id="AdS-RC-43T"/>
+                            <constraint firstAttribute="centerY" secondItem="cvZ-ux-URi" secondAttribute="centerY" id="lIR-6F-IQK"/>
+                            <constraint firstAttribute="width" secondItem="cvZ-ux-URi" secondAttribute="width" multiplier="600:451" id="yJm-qP-ctO"/>
+                        </constraints>
+                    </view>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5y-zp-n3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="-46"/>
+        </scene>
+        <!--RegistrationVC-->
         <scene sceneID="63H-TX-Lgi">
             <objects>
-                <viewController id="OPf-pQ-ojW" sceneMemberID="viewController">
+                <viewController id="OPf-pQ-ojW" customClass="RegistrationVC" customModule="checkers_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dst-Kk-4Qg"/>
                         <viewControllerLayoutGuide type="bottom" id="Nyx-It-qCt"/>
@@ -210,8 +251,12 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ShM-ys-Zzu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Registation" id="MWj-o2-ktI">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="uNW-8K-Wig"/>
+                                    <navigationItem title="Registration" id="MWj-o2-ktI">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="MS4-e3-Bfn">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="show" id="IDS-42-oAO"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -233,15 +278,22 @@
                                 <state key="normal" title="create account">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="OPf-pQ-ojW" eventType="touchUpInside" id="C4p-Oi-Sd1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Yq4-nB-SZr" id="VLO-7p-3Qe"/>
+                        <outlet property="passwordTextField" destination="fSd-xe-kFC" id="iMy-Gy-fSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sms-Fk-R6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="629"/>
+            <point key="canvasLocation" x="313" y="647"/>
         </scene>
     </scenes>
 </document>
