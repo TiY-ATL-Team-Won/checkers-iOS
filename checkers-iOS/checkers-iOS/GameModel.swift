@@ -25,6 +25,8 @@ class GameModel: NSObject {
     
     /// 0 = empty, 1 = player1, 2 = player2
     
+    var id = 0
+    
     let boardSquares = [
         
         [0,1,0,1,0,1,0,1],
@@ -39,6 +41,8 @@ class GameModel: NSObject {
     ]
     
     var boardPieces: [[GamePiece?]] = Array(count: 8, repeatedValue: Array(count: 8, repeatedValue: nil))
+    
+    var availableMoves: [(Int,Int)] = []
     
     // board squares [row][col]
     
